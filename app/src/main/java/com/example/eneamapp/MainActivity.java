@@ -127,8 +127,18 @@ public class MainActivity extends AppCompatActivity {
 
                 if(options[item].equals("Take Photo"))
                 {
+                    System.out.println(options[item]);
                     Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(takePicture, 0);
+
+                    if(takePicture.resolveActivity(getPackageManager()) != null)
+                    {
+
+                        startActivityForResult(takePicture, 0);
+                    }
+                    else {
+                        Toast.makeText(context, "Une erreur lors de la capture", Toast.LENGTH_LONG).show();
+                    }
+
                 } else if (options[item].equals("Choose from Gallery")) {
                     Intent pickPhoto = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(pickPhoto, 1);
