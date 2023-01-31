@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.EneamApp.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/colorPrimary"
+                        android:id="@+id/toolbar"
+                        app:popupTheme="@style/Theme.EneamApp.PopupOverlay"
+                        />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                        <!-- Les images -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+                                <ImageView
+                                    android:id="@+id/image"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/eneam"
+                                    android:clickable="true"
+                                    android:onClick="changeImage">
+                                </ImageView>
+                        </LinearLayout>
+
+                        <!-- Nom -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nom"
+                                    android:textSize="15dp"
+                                    android:layout_weight="9"/>
+
+                                <EditText
+                                    android:id="@+id/nom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:hint="@string/nom_hint"
+                                    android:layout_weight="3" />
+                        </LinearLayout>
+
+                        <!-- Prénom -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp"
+                            >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/prenom"
+                                    android:textSize="15dp"
+                                    android:layout_weight="9"></TextView>
+
+                                <EditText
+                                    android:id="@+id/prenom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:hint="@string/prenom_hint"
+                                    android:layout_weight="3" />
+
+                        </LinearLayout>
+
+                        <!-- Date -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/date"
+                                    android:textSize="15dp"
+                                    android:layout_weight="9"></TextView>
+
+                                <EditText
+                                    android:id="@+id/date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="date"
+                                    android:hint="@string/date_hint"
+                                    android:layout_weight="3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sexe"
+                                    android:textSize="15dp"
+                                    android:layout_weight="9"></TextView>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/sexe_masculin"></RadioButton>
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/sexe_feminin"></RadioButton>
+
+                                </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:text="@string/filiere"
+                                    android:layout_weight="9"></TextView>
+                                <Spinner
+                                    android:id="@+id/spinner_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3">
+
+                                </Spinner>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="9"
+                                    android:text="@string/loisirs"
+                                    android:layout_marginTop="40dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:text="@string/loisir_foot"
+                                            android:layout_weight="1"></CheckBox>
+
+                                        <CheckBox
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:text="@string/loisir_musique"
+                                            android:layout_weight="1"></CheckBox>
+
+                                        <CheckBox
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            android:text="@string/loisir_danse"
+                                            android:layout_weight="1"></CheckBox>
+                                </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="15dp">
+                                <Button
+                                    android:id="@+id/button_cancel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/annuler"
+                                    android:onClick="annuler"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/red"/>
+
+                                <Button
+                                    android:id="@+id/button_save"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/enregister"
+                                    android:onClick="enregistrer"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+        </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nom">Nom :</string>
+    <string name="nom_hint">Ex : DOE</string>
+
+    <string name="prenom">Prénom :</string>
+    <string name="prenom_hint">Ex : John</string>
+
+    <string name="telephone">Téléphone :</string>
+
+    <string name="date">Date :</string>
+    <string name="date_hint">DD/MM/YYYY</string>
+
+    <string name="sexe">Sexe :</string>
+    <string name="sexe_masculin">Masculin</string>
+    <string name="sexe_feminin">Féminin</string>
+
+    <string name="filiere">Filiere :</string>
+    <string-array name="filieres">
+        <item>IG</item>
+        <item>GFC</item>
+        <item>PLAN</item>
+        <item>GBA</item>
+    </string-array>
+
+
+    <string name="loisirs">Loisirs :</string>
+    <string name="loisir_danse">Danse</string>
+    <string name="loisir_musique">Musique</string>
+    <string name="loisir_foot">Football</string>
+
+    <string name="annuler">Annuler</string>
+    <string name="enregister">Enregistrer</string>
+</resources>
